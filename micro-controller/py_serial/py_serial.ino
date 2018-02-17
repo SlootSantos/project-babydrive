@@ -2,23 +2,27 @@
 
 void setup() {
   pinMode(13,OUTPUT);
-  digitalWrite(13,LOW);  
+  digitalWrite(13,LOW);
   Serial.begin(9600);
 }
 
 void loop() {
-  if(Serial.available() > 0) {
-    if(Serial.read() == 's') {
-      digitalWrite(13,HIGH);
-      delay(1000);
-      
-      digitalWrite(13, LOW);
-      delay(1000);
-      
-      digitalWrite(13,HIGH);
-      delay(1000);
-    }
-  } else {
-      digitalWrite(13,LOW);
-  }
+  if (Serial.available() > 0) {
+  //   if (Serial.read() == 's') {
+  //     digitalWrite(13,HIGH);
+  //     delay(1000);
+  //
+  //     digitalWrite(13, LOW);
+  //     delay(1000);
+  //
+  //     digitalWrite(13,HIGH);
+  //     delay(1000);
+  //   }
+  // } else {
+  //     digitalWrite(13,LOW);
+  // }
+  
+ // test writing to serail so python script can read it
+  Serial.println("Moin Chef");
+  delay(1000);
 }
